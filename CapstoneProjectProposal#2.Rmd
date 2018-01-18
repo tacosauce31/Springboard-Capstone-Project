@@ -31,14 +31,14 @@ The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan
 #Autos.CSV data set
 
 This dataset's summary is the following:
-```{r autos_csv_1_}
-summary(autos_csv_1_)
+```{r}
+summary(auto_csv)
 
 ```
 
 This dataset's structure is the following:
-```{r auto_csv_1_}
-str(autos_csv_1_)
+```{r}
+str(auto_csv)
 
 ```
 
@@ -47,14 +47,14 @@ In review of this dataset, some of the fields are in german. I will have to tran
 #Car Prices data sets
 
 This dataset's summary is the following:
-```{r cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice}
-summary(cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice)
+```{r}
+summary(carPrice)
 
 ```
 
 This dataset's structure is the following:
-```{r cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice}
-str(cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice)
+```{r}
+str(carPrice)
 ```
 
 
