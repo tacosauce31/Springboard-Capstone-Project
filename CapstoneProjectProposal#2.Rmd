@@ -28,7 +28,7 @@ My client will be finance companies looking to forecast, purchase and/or sell ve
 
 The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan. These data sets include vehicle information, seller, notRepaired Damage, #ofpictures, lastSeeenOnline, averagePrice, lowPrice, highPrice.
 
-### Autos.CSV data set
+#### Autos.CSV data set
 
 This dataset's summary is the following:
 ```{r}
@@ -44,7 +44,7 @@ str(auto_csv)
 
 In review of this dataset, some of the fields are in german. I will have to translate those field into English for my clients. The rest of the data looks to be in fair order and will be an easy import for further analysis 
 
-### Car Prices data sets
+#### Car Prices data sets
 
 This dataset's summary is the following:
 ```{r}
