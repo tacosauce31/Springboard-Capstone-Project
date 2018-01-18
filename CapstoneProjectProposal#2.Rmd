@@ -32,13 +32,13 @@ The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan
 
 This dataset's summary is the following:
 ```{r}
-summary(auto_csv)
+summary(autos_csv)
 
 ```
 
 This dataset's structure is the following:
 ```{r}
-str(auto_csv)
+str(autos_csv)
 
 ```
 
