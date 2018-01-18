@@ -1,0 +1,68 @@
+---
+title: "Capstone Proposal"
+author: "David Aragon"
+date: "January 9, 2018"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Capstone Proposal 
+
+In my analysis, I want to be able to forecast and display the used car market based on already used data. 
+
+
+## Problem
+The problem I want to solve is eliminating cars that will not sell in a timely manner 
+
+## Who is my client and Why do they care
+
+My client will be finance companies looking to forecast, purchase and/or sell vehicles in and out of their respective lots. 
+
+## Data
+
+The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan. These data sets include vehicle information, seller, notRepaired Damage, #ofpictures, lastSeeenOnline, averagePrice, lowPrice, highPrice.
+
+#Autos.CSV data set
+
+This dataset's summary is the following:
+```{r autos_csv_1_}
+summary(autos_csv_1_)
+
+```
+
+This dataset's structure is the following:
+```{r auto_csv_1_}
+str(autos_csv_1_)
+
+```
+
+In review of this dataset, some of the fields are in german. I will have to translate those field into English for my clients. The rest of the data looks to be in fair order and will be an easy import for further analysis 
+
+#Car Prices data sets
+
+This dataset's summary is the following:
+```{r cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice}
+summary(cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice)
+
+```
+
+This dataset's structure is the following:
+```{r cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice}
+str(cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice)
+```
+
+
+## Approach
+
+My approach to analyzing this data will be to clean up the data significantly. The data is in german so I will need to translate as my client will be mostly english speakers. Once data is cleaned, I will join the datasets are prices and vehicle info are two different datasets. Using R language and RStudio, I will display which vehicle are the best selling and also display a table of value loss of an average used car per year. 
+
+## Deliverables
+
+I plan on using R language to write the necessary code to display line graphs to show the progression or regression of certain vehicle in a particular lot. I plan on converting this visualization as a PDF file to share with client
+
