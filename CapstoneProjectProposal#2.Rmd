@@ -57,6 +57,7 @@ This dataset's structure is the following:
 str(carPrice)
 ```
 
+In this dataset, it has 8 variables : count, year, km, powerPS, minPrice, maxPrice, avgPrice, and sdPrice. 6 of these variable are integer types and 2 are numeric types. This dataset is fairly clean so not much clean up will be involved in data analysis. 
 
 ## Approach
 
