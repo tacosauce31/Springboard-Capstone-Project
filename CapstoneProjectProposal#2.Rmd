@@ -31,8 +31,8 @@ The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan
 #### Autos.CSV data set
 
 This dataset's summary is the following:
-```{r}
-summary(autos_csv, echo = FALSE)
+```{r autos_csv, echo = FALSE}
+summary(autos_csv)
 
 ```
 
