@@ -3,13 +3,14 @@ title: "Capstone Proposal"
 author: "David Aragon"
 date: "January 9, 2018"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+###autos_csv <- read.csv("~/Downloads/autos.csv")
+carPrice <- read.csv("~/Downloads/cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice.csv")
 ```
 
 ## Capstone Proposal 
@@ -31,14 +32,14 @@ The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan
 #### Autos.CSV data set
 
 This dataset's summary is the following:
-```{r autos_csv, echo = FALSE}
-summary(autos_csv)
+```{r auto, echo = FALSE}
+#summary(autos_csv)
 
 ```
 
 This dataset's structure is the following:
 ```{r}
-str(autos_csv, echo = FALSE)
+#str(autos_csv)
 
 
 ```
@@ -48,13 +49,13 @@ In review of this dataset, some of the fields are in german. I will have to tran
 #### Car Prices data sets
 
 This dataset's summary is the following:
-```{r}
+```{r echo = FALSE }
 summary(carPrice)
 
 ```
 
 This dataset's structure is the following:
-```{r}
+```{r echo= FALSE }
 str(carPrice)
 ```
 
