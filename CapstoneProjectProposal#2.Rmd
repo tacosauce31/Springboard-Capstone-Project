@@ -13,7 +13,7 @@ autos_csv <- read.csv("~/Downloads/autos (1).csv")
 carPrice <- read.csv("~/Downloads/cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice.csv")
 ```
 
-## Capstone Proposal 
+## Capstone Proposal Overview
 
 The used car market lately has been on the rise. With the economy benefiting from lower unemployment rates, the used car market has flourished. The car market has a whole has benefited as well with lease sales increasing. Because lease sales are on the rise, people can either turn in their vehicle or keep it. For those that have kept their vehicle, the used car market gains from consumer turn ins. Consumers that leased their vehicle are much more likely to take care of their vehicles to avert paying high wear and tear charges. As a result, the quality of used cars in a particular car lot is quite good. 
 
