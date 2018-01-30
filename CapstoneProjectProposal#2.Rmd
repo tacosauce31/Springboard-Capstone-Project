@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r}
-###autos_csv <- read.csv("~/Downloads/autos.csv")
+autos_csv <- read.csv("~/Downloads/autos (1).csv")
 carPrice <- read.csv("~/Downloads/cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice.csv")
 ```
 
@@ -33,13 +33,13 @@ The data used in this analy/ ccvcv  fsis will be scraped from Ebay-Kleinanzeigan
 
 This dataset's summary is the following:
 ```{r auto, echo = FALSE}
-#summary(autos_csv)
+summary(autos_csv)
 
 ```
 
 This dataset's structure is the following:
 ```{r}
-#str(autos_csv)
+str(autos_csv)
 
 
 ```

@@ -127,7 +127,7 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code>###autos_csv &lt;- read.csv(&quot;~/Downloads/autos.csv&quot;)
+<pre class="r"><code>autos_csv &lt;- read.csv(&quot;~/Downloads/autos (1).csv&quot;)
 carPrice &lt;- read.csv(&quot;~/Downloads/cnt_km_year_powerPS_minPrice_maxPrice_avgPrice_sdPrice.csv&quot;)</code></pre>
 <div id="capstone-proposal" class="section level2">
 <h2>Capstone Proposal</h2>
@@ -147,8 +147,85 @@ carPrice &lt;- read.csv(&quot;~/Downloads/cnt_km_year_powerPS_minPrice_maxPrice_
 <div id="autos.csv-data-set" class="section level4">
 <h4>Autos.CSV data set</h4>
 <p>This dataset’s summary is the following:</p>
+<pre><code>##               dateCrawled                      name       
+##  2016-03-08 15:50:29:     5   Ford_Fiesta        :   336  
+##  2016-03-20 16:50:22:     5   Volkswagen_Golf_1.4:   335  
+##  2016-03-26 10:51:07:     5   BMW_318i           :   334  
+##  2016-03-31 17:57:07:     5   Opel_Corsa         :   316  
+##  2016-04-02 14:50:21:     5   BMW_316i           :   258  
+##  2016-03-05 15:48:41:     4   BMW_320i           :   256  
+##  (Other)            :189320   (Other)            :187514  
+##         seller         offerType          price              abtest     
+##  gewerblich:     2   Angebot:189341   Min.   :       0   control:91131  
+##  privat    :189347   Gesuch :     8   1st Qu.:    1150   test   :98218  
+##                                       Median :    2950                  
+##                                       Mean   :   10895                  
+##                                       3rd Qu.:    7200                  
+##                                       Max.   :99999999                  
+##                                                                         
+##      vehicleType    yearOfRegistration      gearbox      
+##  limousine :48701   Min.   :1000                : 10395  
+##  kleinwagen:40759   1st Qu.:1999       automatik: 39220  
+##  kombi     :34498   Median :2003       manuell  :139734  
+##            :19437   Mean   :2005                         
+##  bus       :15532   3rd Qu.:2008                         
+##  cabrio    :11668   Max.   :9999                         
+##  (Other)   :18754                                        
+##     powerPS            model          kilometer      monthOfRegistration
+##  Min.   :    0.0   golf   : 15286   Min.   :  5000   Min.   : 0.000     
+##  1st Qu.:   70.0   andere : 13453   1st Qu.:125000   1st Qu.: 3.000     
+##  Median :  105.0   3er    : 10528   Median :150000   Median : 6.000     
+##  Mean   :  114.7          : 10398   Mean   :125640   Mean   : 5.733     
+##  3rd Qu.:  150.0   polo   :  6714   3rd Qu.:150000   3rd Qu.: 9.000     
+##  Max.   :19208.0   corsa  :  6415   Max.   :150000   Max.   :12.000     
+##                    (Other):126555                                       
+##     fuelType                brand       notRepairedDamage
+##  benzin :114106   volkswagen   :40687       : 36542      
+##  diesel : 54968   bmw          :20545   ja  : 18410      
+##         : 16936   opel         :20427   nein:134397      
+##  lpg    :  2732   mercedes_benz:17931                    
+##  cng    :   308   audi         :16676                    
+##  hybrid :   142   ford         :13093                    
+##  (Other):   157   (Other)      :59990                    
+##               dateCreated      nrOfPictures   postalCode   
+##  2016-04-03 00:00:00:  7392   Min.   :0     Min.   : 1067  
+##  2016-04-04 00:00:00:  7185   1st Qu.:0     1st Qu.:30559  
+##  2016-03-20 00:00:00:  6860   Median :0     Median :49661  
+##  2016-03-12 00:00:00:  6853   Mean   :0     Mean   :50892  
+##  2016-03-21 00:00:00:  6843   3rd Qu.:0     3rd Qu.:71577  
+##  2016-03-14 00:00:00:  6691   Max.   :0     Max.   :99998  
+##  (Other)            :147525                                
+##                 lastSeen     
+##  2016-04-07 00:46:04:    14  
+##  2016-04-06 04:17:47:    12  
+##  2016-04-06 05:44:34:    12  
+##  2016-04-06 08:15:55:    12  
+##  2016-04-06 09:46:11:    12  
+##  2016-04-06 09:46:51:    12  
+##  (Other)            :189275</code></pre>
 <p>This dataset’s structure is the following:</p>
-<pre class="r"><code>#str(autos_csv)</code></pre>
+<pre class="r"><code>str(autos_csv)</code></pre>
+<pre><code>## 'data.frame':    189349 obs. of  20 variables:
+##  $ dateCrawled        : Factor w/ 164590 levels &quot;2016-03-05 14:06:22&quot;,..: 96234 96080 44613 62122 135465 158918 142369 82743 161561 60299 ...
+##  $ name               : Factor w/ 128113 levels &quot;_____AUDI_A4_S_LINE______VOLLAUSSTATUNG______&quot;,..: 43627 2401 50197 44557 95036 15652 80956 118428 34979 119710 ...
+##  $ seller             : Factor w/ 2 levels &quot;gewerblich&quot;,&quot;privat&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ offerType          : Factor w/ 2 levels &quot;Angebot&quot;,&quot;Gesuch&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ price              : int  480 18300 9800 1500 3600 650 2200 0 14500 999 ...
+##  $ abtest             : Factor w/ 2 levels &quot;control&quot;,&quot;test&quot;: 2 2 2 2 2 2 2 2 1 2 ...
+##  $ vehicleType        : Factor w/ 9 levels &quot;&quot;,&quot;andere&quot;,&quot;bus&quot;,..: 1 5 9 6 6 8 4 8 3 6 ...
+##  $ yearOfRegistration : int  1993 2011 2004 2001 2008 1995 2004 1980 2014 1998 ...
+##  $ gearbox            : Factor w/ 3 levels &quot;&quot;,&quot;automatik&quot;,..: 3 3 2 3 3 3 3 3 3 3 ...
+##  $ powerPS            : int  0 190 163 75 69 102 109 50 125 101 ...
+##  $ model              : Factor w/ 251 levels &quot;&quot;,&quot;1_reihe&quot;,&quot;100&quot;,..: 119 1 120 119 104 13 9 42 58 119 ...
+##  $ kilometer          : int  150000 125000 125000 150000 90000 150000 150000 40000 30000 150000 ...
+##  $ monthOfRegistration: int  0 5 8 6 7 10 8 7 8 0 ...
+##  $ fuelType           : Factor w/ 8 levels &quot;&quot;,&quot;andere&quot;,&quot;benzin&quot;,..: 3 5 5 3 5 3 3 3 3 1 ...
+##  $ brand              : Factor w/ 40 levels &quot;alfa_romeo&quot;,&quot;audi&quot;,..: 39 2 15 39 32 3 26 39 11 39 ...
+##  $ notRepairedDamage  : Factor w/ 3 levels &quot;&quot;,&quot;ja&quot;,&quot;nein&quot;: 1 2 1 3 3 2 3 3 1 1 ...
+##  $ dateCreated        : Factor w/ 97 levels &quot;2014-03-10 00:00:00&quot;,..: 83 83 73 76 90 94 91 80 94 76 ...
+##  $ nrOfPictures       : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ postalCode         : int  70435 66954 90480 91074 60437 33775 67112 19348 94505 27472 ...
+##  $ lastSeen           : Factor w/ 111190 levels &quot;2016-03-05 14:15:08&quot;,..: 107390 106918 92424 25353 100813 104198 94797 50176 88971 71117 ...</code></pre>
 <p>In review of this dataset, some of the fields are in german. I will have to translate those field into English for my clients. The rest of the data looks to be in fair order and will be an easy import for further analysis</p>
 </div>
 <div id="car-prices-data-sets" class="section level4">
