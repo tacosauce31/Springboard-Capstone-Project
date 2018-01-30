@@ -3,9 +3,10 @@ title: "Capstone Proposal"
 author: "David Aragon"
 date: "January 9, 2018"
 output:
+  word_document: default
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 ---
 
 ```{r}
